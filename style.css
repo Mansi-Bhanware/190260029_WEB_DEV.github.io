@@ -1,0 +1,135 @@
+* {
+  background-color: #3aafa9;
+  font-family: Century Gothic ;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+}
+.navchild {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin: 25px 25px;
+}
+.navchild a {
+  text-decoration: none;
+  color: #feffff;
+  padding: 5px 20px;
+  border: 1px hidden ;
+  transition: 1s ease;
+}
+.navchild a:hover {
+  background-color: #2b7a78;
+  border-radius: 10px;
+}
+.home {
+  float: left;
+  margin: 25px 25px;
+  display: block;
+}
+.home a {
+  text-decoration: none;
+  color: #feffff;
+  padding: 5px 20px;
+  border: 1px hidden #feffff;
+  transition: 1s ease;
+}
+.home a:hover {
+    background-color: #2b7a78;
+    border-radius: 10px;
+}
+.main {
+  max-width: 1200px;
+  margin: auto;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.title p {
+  color: #feffff;
+  font-size: 2em;
+  line-height: -10px;
+  text-align: justify;
+}
+.title h1 {
+  color: #feffff;
+  font-size: 4em;
+  animation-name: namepop;
+  animation-duration: 1s;
+}
+.title h2 {
+  color: #17252a;
+  font-size: 2.5em;
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+}
+.hidenav div {
+  width: 25px;
+  height: 3px;
+  background-color: #feffff;
+  margin: 5px;
+}
+.hidenav {
+  display: none;
+  cursor: pointer;
+}
+.spcl {
+  display: none;
+}
+.active {
+  background-color: #2b7a78;
+}
+.pop {
+  transition: 1s ease;
+  height: 1em;
+}
+@keyframes namepop {
+  0% {font-size: 0px;}
+  100% {font-size: 4em;}
+}
+
+@media screen and (max-width:728px){
+  body {
+    overflow-x: hidden;
+  }
+  .spcl {
+    display: block;
+  }
+  .hidenav {
+    display: block;
+    float: right;
+    margin-right: 2em;
+  }
+  .home {
+    display: none;
+  }
+  .navchild {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 20vh;
+    background-color: #3aafa9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .navchild a {
+    margin-bottom: 20px;
+  }
+}
