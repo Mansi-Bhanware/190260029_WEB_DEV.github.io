@@ -6,23 +6,7 @@
 body {
   background-color: #3aafa9;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-}
-.dp img {
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-  display: block;
-  margin-left: 60%;
-  margin-right: 40%;
-  transform: translateY(-70vh);
-  transition: all 1s ease;
-  animation-name: imagepop;
-  animation-duration: 2s;
-}
-.dp img:hover {
-  height: 350px;
-  width: 350px;
+  overflow: visible;
 }
 .navchild {
   display: flex;
@@ -65,36 +49,6 @@ body {
     background-color: #2b7a78;
     transition: 1s ease;
 }
-.title {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  height:80vh;
-}
-
-
-.title h1 {
-  color: #feffff;
-  font-size: 5em;
-  height: auto;
-  width: 70%;
-  padding-left: 5px;
-  background-color: #17252a;
-  animation-name: namepop;
-  animation-duration: 1s;
-}
-.title h1 span {
-  transition: 1s ease;
-}
-.title h1 span:hover {
-  font-size: 50px;
-}
-.title p {
-  color: #17252a;
-  font-size: 1em;
-  width: 30%;
-  height: auto;
-}
 .navbar{
   display: flex;
   justify-content: space-around;
@@ -122,7 +76,7 @@ body {
 }
 .topic {
   flex: 1;
-  margin-left: 10px;
+  margin-left: 5%;
   font-size: 30px;
   font-weight: 900;
   letter-spacing: 5px;
@@ -133,46 +87,55 @@ body {
 }
 .text {
   font-size: 2em;
-  padding-left: 5%;
+  padding:0px 5%;
   transition: 1s ease;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: textpop;
+  animation-duration: 1s;
 }
-
+.form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #17252a;
+  color: #feffff;
+  font-size: 20px;
+  justify-content: space-around;
+  animation-name: pop;
+  animation-duration: 1s;
+}
+.form label {
+  margin: 1em;
+}
+.form input {
+  margin: 1em;
+  padding: 12px 20px;
+}
+.form button {
+  margin: 2em;
+}
+.form button:hover {
+  cursor: pointer;
+}
+.form textarea {
+  padding: 12px 20px;
+}
 @keyframes pop {
   0% {font-size: 0px;}
   100% {font-size: 20px;}
 }
-@keyframes namepop {
+@keyframes textpop {
   0% {font-size: 0px; width: 0px}
-  100% {font-size: 5em; width: 70%;}
+  100% {font-size: 2em; width: 100%;}
 }
-@keyframes imagepop {
-  0% {height: 0px; width: 0px;}
-  100% {height: 400px; width: 400px;}
-}
-@media screen and (max-width:1100px) {
-  .title h1 {
-    font-size: 3.5em;
-    padding-top: 30px;
-  }
-}
-@media screen and (max-width:728px){
+@media screen and (max-width:728px) {
   body {
     overflow-x: hidden;
   }
   .topic {
     display: block;
-  }
-  .dp img {
-  height: 200px;
-  width: 200px;
-  transform: translate(-41vh,-40vh);
-  transition: all 1s ease;
-  animation-name: image2;
-  animation-duration: 1s;
-  }
-  @keyframes image2 {
-    0% {height: 0px; width: 0px;}
-    100% {height: 200px; width: 200px;}
   }
   .spcl {
     display: block;
@@ -214,9 +177,5 @@ body {
   }
   .toggle .l3 {
     transform: rotate(45deg )translate(-5px,-6px);
-  }
-  .hideimg {
-    width: 0px;
-    height: 0px;
   }
 }
