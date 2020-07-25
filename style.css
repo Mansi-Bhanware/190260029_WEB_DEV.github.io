@@ -182,22 +182,22 @@ body {
   }
   .hidenav {
     display: block;
-    margin-right: 2.5em;
+    margin-right: 20px;
+    position: fixed;
   }
   .home {
     display: none;
   }
   .navchild {
-    position: absolute;
+    position: fixed;
     right: 0px;
-    height: 900vh;
-    top: 10vh;
+    height: 90vh;
+    top: 15%;
     background-color: #17252a;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    transform: translateX(105%);
+    transform: translateX(110%);
     transition: transform 0.5s ease-in;
   }
   .navchild a {
